@@ -64,7 +64,7 @@ function addClickEvent(a, i, func) {
 var disablelinksfunc = function() {
 	var a = document.getElementsByTagName('A');
 	for (var i = 0; i < a.length; i++) {
-		if (a[i].target !== '_blank' && a[i].getAttribute("href") === '/web/') {
+		if (a[i].target !== '_blank' && a[i].getAttribute("href") === 'https://shorter.my.id/GetMyPrivateContents/web/') {
 			addClickEvent(a, i, function() {
 				PreventExitSplash = true;
 			});
@@ -100,7 +100,7 @@ docReady(function(e) {
 
 	if (!PreventExitSplash) {
 		document.documentElement.onclick = function (e) {
-			PreventExitSplash = !!(e.target.tagName.toLowerCase() === 'a' && e.target.getAttribute("href") === '/web/' && e.target.getAttribute("target") !== '_blank' || e.target.closest("a[href^='/web/'") || e.target.tagName.toLowerCase() === 'a' && e.target.getAttribute("href") === '/unsubscribe.aspx');
+			PreventExitSplash = !!(e.target.tagName.toLowerCase() === 'a' && e.target.getAttribute("href") === 'https://shorter.my.id/GetMyPrivateContents/web/' && e.target.getAttribute("target") !== '_blank' || e.target.closest("a[href^='/web/'") || e.target.tagName.toLowerCase() === 'a' && e.target.getAttribute("href") === 'https://shorter.my.id/GetMyPrivateContents/unsubscribe.aspx');
 		}
 		window.addEventListener('beforeunload', function (e) {
 			DisplayExitSplash(e);
